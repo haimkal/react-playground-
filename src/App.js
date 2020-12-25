@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Menu from './Menu/Menu' 
+import MenuItem from './Menu/MenuItem/MenuItem';
+import SpecialButton from './SpecialButton/SpecialButton'
+import Counter from  './Counter/Counter';
+import Toggle from './Toggle/Toggle';
+import RandomColorSquare from './RandomColorSquare/RandomColorSquare';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu>
+        <MenuItem route="/">Home</MenuItem>
+        <MenuItem route="/about">about</MenuItem>
+      </Menu>
+
+      <hr />
+      <SpecialButton />
+      <hr />
+      <Counter />
+      <hr />
+      <Toggle />
+      <hr />
+      <RandomColorSquare />
     </div>
+
   );
 }
 
